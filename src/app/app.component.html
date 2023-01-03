@@ -1,0 +1,50 @@
+<div class="global">
+<h1>placehold.psd</h1>
+<div class="contents">
+  <div>
+    <form class="forms" [formGroup]="pictForm">
+        <mat-form-field class="input-from" appearance="outline">
+          <mat-label>幅(width)</mat-label>
+          <input id="width" matInput formControlName="width">
+          <mat-hint>1~32768px</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field  class="input-from" appearance="outline">
+          <mat-label>高さ(height)</mat-label>
+          <input id="height" matInput formControlName="height">
+          <mat-hint>1~32768px</mat-hint>
+        </mat-form-field>
+
+        <div class="input-from">
+          <mat-label>文字色</mat-label>
+        <ngx-colors
+        ngx-colors-trigger
+        formControlName="fontColor"
+      ></ngx-colors>
+    </div>
+    <div class="input-from">
+      <mat-label>背景色</mat-label>
+      <ngx-colors
+      ngx-colors-trigger
+      formControlName="bgColor"
+    ></ngx-colors>
+  </div>
+  <mat-form-field  class="input-from" appearance="outline">
+    <mat-label>文字サイズ</mat-label>
+    <input id="size" matInput formControlName="fontSize">
+    <mat-hint>1~512px</mat-hint>
+  </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>表示文字</mat-label>
+      <textarea matInput formControlName="text"></textarea>
+    </mat-form-field>
+
+    </form>
+    <button  mat-raised-button color="primary" (click)="click()">ダウンロード</button>
+  </div>
+  <div id="capture" [ngStyle]="style">
+    <div>{{pictText}}</div>
+  </div>
+</div>
+</div>

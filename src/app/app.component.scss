@@ -1,0 +1,24 @@
+.global {
+  padding: 50px;
+}
+.contents {
+  display: flex;
+}
+.forms {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  .input-from {
+    width: 110px;
+  }
+}
+
+#capture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-wrap: break-word;
+  line-height: 1.0em;
+  line-break: anywhere;
+  white-space: pre-line;
+}
